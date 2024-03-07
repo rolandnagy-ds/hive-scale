@@ -363,6 +363,7 @@ def fetch_data(start_date, end_date):
 
 # Create Dash app
 app = dash.Dash(__name__)
+server = app.server
 
 # Define layout of the app
 app.layout = html.Div([
