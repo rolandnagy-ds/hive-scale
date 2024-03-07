@@ -33,6 +33,7 @@ dates = [datetime.strptime(entry['created_at'], '%Y-%m-%dT%H:%M:%SZ').replace(tz
 
 # Create Dash app
 app = dash.Dash(__name__)
+server = app.server
 
 # Define layout of the app
 app.layout = html.Div([
