@@ -367,7 +367,7 @@ server = app.server
 
 # Define layout of the app
 app.layout = html.Div([
-    html.H1("N. Z. kaptármérleg tömege", style={'textAlign': 'center'}),
+    html.H1("N. Z. - Hive Scale Data", style={'textAlign': 'center'}),
     html.Label('Select timeframe:'),
     dcc.Dropdown(
         id='timeframe-dropdown',
