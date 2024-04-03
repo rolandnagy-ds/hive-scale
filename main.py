@@ -147,14 +147,14 @@ def update_graph(timeframe, start_date, end_date, n_intervals):
         if start_date is None or end_date is None:
             return {'data': [], 'layout': {'title': 'Custom timeframe selected'}}
         else:
-            dates, values = fetch_data(start_date, end_date)
-            return px.line(x=dates, y=values, title='Custom timeframe selected', labels={'x': 'Date', 'y': 'Mass'})
+            dates, values, dates_weather, temp = fetch_data(start_date, end_date)
+            fig = go.Figure(layout_yaxis_range=[0, 60])
+            fig.add_scatter(x=dates, y=values, mode='lines', name='Mass', fill='tozeroy')
+            fig.add_scatter(x=dates_weather, y=temp, mode='lines', name='Temperature')
+            return fig
     else:
         dates, values, dates_weather, temp = fetch_data('last_5_values', 'today')
-        
-        values = [x / 9000 for x in values] ##### ONLY FOR TESTING
-        #fig = px.area(x=dates, y=values, title='Last 3 days selected', labels={'x': 'Date', 'y': 'Mass'}, range_x=[datetime.now() - timedelta(days=5), datetime.now()])
-        #fig.add_scatter(x=dates_weather, y=temp, mode='lines', name='Temperature')
+        #values = [x / 9000 for x in values] ##### ONLY FOR TESTING
         fig = go.Figure(layout_xaxis_range=[datetime.now() - timedelta(days=5), datetime.now()], layout_yaxis_range=[0, 60])
         fig.add_scatter(x=dates, y=values, mode='lines', name='Mass', fill='tozeroy')
         fig.add_scatter(x=dates_weather, y=temp, mode='lines', name='Temperature')
