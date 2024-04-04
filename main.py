@@ -1,6 +1,7 @@
 import dash
 from dash import dcc, html
 import plotly.graph_objs as go
+from plotly.subplots import make_subplots
 import requests
 from datetime import datetime, timedelta
 from dash.dependencies import Input, Output, State
@@ -148,16 +149,30 @@ def update_graph(timeframe, start_date, end_date, n_intervals):
             return {'data': [], 'layout': {'title': 'Custom timeframe selected'}}
         else:
             dates, values, dates_weather, temp = fetch_data(start_date, end_date)
-            fig = go.Figure(layout_yaxis_range=[0, 60])
-            fig.add_scatter(x=dates, y=values, mode='lines', name='Mass', fill='tozeroy')
-            fig.add_scatter(x=dates_weather, y=temp, mode='lines', name='Temperature')
+            fig = make_subplots(specs=[[{"secondary_y": True}]])
+            fig.add_scatter(x=dates, y=values, mode='lines', name='Mass', fill='tozeroy',secondary_y=True)
+            fig.add_scatter(x=dates_weather, y=temp, mode='lines', name='Temperature',secondary_y=False)
+            # Set axes titles
+            fig.update_yaxes(title_text="Hive mass", secondary_y=True)
+            fig.update_yaxes(title_text="Temperature", secondary_y=False)
+            # Set axis ranges
+            fig.update_yaxes(range=[30,50], secondary_y=True) # For the scale range
+            fig.update_yaxes(range=[0,40], secondary_y=False) # For the temperature range
             return fig
     else:
         dates, values, dates_weather, temp = fetch_data('last_5_values', 'today')
         #values = [x / 9000 for x in values] ##### ONLY FOR TESTING
-        fig = go.Figure(layout_xaxis_range=[datetime.now() - timedelta(days=5), datetime.now() + timedelta(hours=2)], layout_yaxis_range=[0, 60])
-        fig.add_scatter(x=dates, y=values, mode='lines', name='Mass', fill='tozeroy')
-        fig.add_scatter(x=dates_weather, y=temp, mode='lines', name='Temperature')
+        # Create figure with secondary y-axis
+        fig = make_subplots(specs=[[{"secondary_y": True}]])
+        fig.add_scatter(x=dates, y=values, mode='lines', name='Mass', fill='tozeroy',secondary_y=True)
+        fig.add_scatter(x=dates_weather, y=temp, mode='lines', name='Temperature',secondary_y=False)
+        # Set axes titles
+        fig.update_yaxes(title_text="Hive mass", secondary_y=True)
+        fig.update_yaxes(title_text="Temperature", secondary_y=False)
+        # Set axis ranges
+        fig.update_xaxes(range=[datetime.now() - timedelta(days=5), datetime.now() + timedelta(hours=2)])
+        fig.update_yaxes(range=[30,50], secondary_y=True) # For the scale range
+        fig.update_yaxes(range=[0,40], secondary_y=False) # For the temperature range
         return fig
 
 # Callback to generate CSV file content (modify data fetching as needed)
