@@ -49,7 +49,7 @@ def fetch_data(start_date, end_date):
     # Get weather data from OpenWeather API
     start_wthr = start_date.strftime('%Y-%m-%d') #'2024-03-01'
     end_wthr = end_date.strftime('%Y-%m-%d') #'2024-03-20'
-    response = requests.get('https://archive-api.open-meteo.com/v1/archive?latitude=46.84171812529077&longitude=16.82906778840788&start_date='+start_wthr+'&end_date='+end_wthr+'&hourly=temperature_2m&timezone=Europe%2FBerlin')
+    response = requests.get('https://archive-api.open-meteo.com/v1/archive?latitude=46.90792744378672&longitude=16.83663344133228&start_date='+start_wthr+'&end_date='+end_wthr+'&hourly=temperature_2m&timezone=Europe%2FBerlin')
     data = response.json()
     dates_weather = []
     for item in data['hourly']['time']:
