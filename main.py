@@ -155,7 +155,7 @@ def update_graph(timeframe, start_date, end_date, n_intervals):
     else:
         dates, values, dates_weather, temp = fetch_data('last_5_values', 'today')
         #values = [x / 9000 for x in values] ##### ONLY FOR TESTING
-        fig = go.Figure(layout_xaxis_range=[datetime.now() - timedelta(days=5), datetime.now()], layout_yaxis_range=[0, 60])
+        fig = go.Figure(layout_xaxis_range=[datetime.now() - timedelta(days=5), datetime.now() + timedelta(hours=2)], layout_yaxis_range=[0, 60])
         fig.add_scatter(x=dates, y=values, mode='lines', name='Mass', fill='tozeroy')
         fig.add_scatter(x=dates_weather, y=temp, mode='lines', name='Temperature')
         return fig
