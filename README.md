@@ -14,7 +14,24 @@ During the project, a stand-alone system was developed with a web dashboard inte
 
 ## 2) Project Implementation
 
+The project was composed of several main components, here I present the basic concepts and solutions.
+
+![hive_system](https://github.com/rolandnagy-ds/hive-scale/assets/81804897/533516cd-534a-433c-a877-13c8401a4451)
+
+
+#### Hardware
+
+A hive balance consists mainly of a weighing unit and its associated processing electronics. 
+
+The weighing unit consists of a 300 kg load cell with an HX711 signal processing module. The digitized signal coming out of it is connected to an ATmega328 microcontroller IC. No data storage is done locally, but the measurement data is directly transmitted to a web server. To do this I use a mobile internet connection with a generic SIM card. The connection between the microcontroller and the SIM card is provided by a SIM800L GPRS module, which communicates using generic AT commands.
+
+The system is powered from a conventional 230V mains supply, so a transformer unit has been added to provide 15V DC for the data acquisition modules.
+
+
+#### Software
+
 Coming soon
+
 
 ## 3) Project Results
 
