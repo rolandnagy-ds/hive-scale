@@ -18,6 +18,7 @@ The project was composed of several main components, here I present the basic co
 
 ![hive_system](https://github.com/rolandnagy-ds/hive-scale/assets/81804897/533516cd-534a-433c-a877-13c8401a4451)
 
+<img src="[https://github.com/favicon.ico](https://github.com/rolandnagy-ds/hive-scale/assets/81804897/533516cd-534a-433c-a877-13c8401a4451)" width="48">
 
 #### Hardware
 
