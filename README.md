@@ -5,12 +5,20 @@
 - v1 Active
 
 ## 1) Project Objective
-The purpose of this project is ________.
+
+The aim of the project is the complete design and implementation of a hive mass measurement system, including hardware, electronics and software.
+
+For beekeepers, knowing the weight of the hives and the weather data back in time provides a lot of information. This allows them to see whether the bees are healthy, whether they are collecting pollen properly and when it is necessary to collect the honey produced from the hive. It is useful to monitor the hive weight continuously during the flowering period, when there are rapid changes, so an automated system was needed.
+
+During the project, a stand-alone system was developed with a web dashboard interface where the hive's mass and weather data can be monitored continuously.
 
 ## 2) Project Implementation
-(Provide more detailed overview of the project.  Talk a bit about your data sources and what questions and hypothesis you are exploring. What specific data analysis/visualization and modelling work are you using to solve the problem? What blockers and challenges are you facing?  Feel free to number or bullet point things here)
+
+Coming soon
 
 ## 3) Project Results
+
+Coming soon
 
 ## Details
 
