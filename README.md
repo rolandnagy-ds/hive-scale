@@ -25,7 +25,7 @@ A hive balance consists mainly of a weighing unit and its associated processing 
 
 The weighing unit consists of a 300 kg load cell with an HX711 signal processing module. The digitized signal coming out of it is connected to an ATmega328 microcontroller IC. No data storage is done locally, but the measurement data is directly transmitted to a web server. To do this I use a mobile internet connection with a generic SIM card. The connection between the microcontroller and the SIM card is provided by a SIM800L GPRS module, which communicates using generic AT commands.
 
-The system is powered from a conventional 230V mains supply, so a transformer unit has been added to provide 15V DC for the data acquisition modules.
+The system is powered from a conventional 230V AC mains supply, so a transformer unit has been added to provide 15V DC for the data acquisition modules.
 
 
 #### Software
