@@ -16,9 +16,8 @@ During the project, a stand-alone system was developed with a web dashboard inte
 
 The project was composed of several main components, here I present the basic concepts and solutions.
 
-![hive_system](https://github.com/rolandnagy-ds/hive-scale/assets/81804897/533516cd-534a-433c-a877-13c8401a4451)
 
-<img src="[https://github.com/favicon.ico](https://github.com/rolandnagy-ds/hive-scale/assets/81804897/533516cd-534a-433c-a877-13c8401a4451)" width="48">
+<img src="https://github.com/rolandnagy-ds/hive-scale/assets/81804897/533516cd-534a-433c-a877-13c8401a4451" align="center" width="500">
 
 #### Hardware
 
