@@ -12,6 +12,7 @@ The purpose of this project is ________.
 
 ## 3) Project Results
 
+## Details
 
 ### Methods Used
 * Data Visualization
@@ -26,7 +27,7 @@ The purpose of this project is ________.
 * HTML
 * (v1: PostGres, MySql)
 
-## Needs of this project
+### Needs of this project
 
 - development of hardware components
   - mechanical components
