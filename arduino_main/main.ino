@@ -84,7 +84,7 @@ void loop()
   delay(4000);
   ShowSerialData();
   
-  String str="GET https://api.thingspeak.com/update?api_key=4VPD78YL22XN91SN&field1=" + String(m);// +"&field2="+String(h);
+  String str="GET https://api.thingspeak.com/update?api_key='your-api-key'&field1=" + String(m);// +"&field2="+String(h);
   Serial.println(str);
   gprsSerial.println(str);//begin send data to remote server
   
