@@ -10,6 +10,8 @@ The aim of the project is the complete design and implementation of a hive mass 
 
 For beekeepers, knowing the weight of the hives and the weather data back in time provides a lot of information. This allows them to see whether the bees are healthy, whether they are collecting pollen properly and when it is necessary to collect the honey produced from the hive. It is useful to monitor the hive weight continuously during the flowering period, when there are rapid changes, so an automated system was needed.
 
+<img src="https://images.unsplash.com/photo-1622057003191-47ee813ad88b?q=80&w=2146&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" align="center" width="500">
+
 During the project, a stand-alone system was developed with a web dashboard interface where the hive's mass and weather data can be monitored continuously.
 
 ## 2) Project Implementation
